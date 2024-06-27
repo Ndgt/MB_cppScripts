@@ -14,6 +14,8 @@ FBRegisterTool		( MYACTSET__CLASS,
 					  MYACTSET__DESC,
 					  FB_DEFAULT_SDK_ICON);
 
+
+/* Create Parented Qt Widget  */
 QWidget* CreateMyActSetWidget(QWidget* pParent) {
 	MyActSetWidget* lWidget = new MyActSetWidget(pParent);
 	return lWidget;
@@ -24,7 +26,7 @@ bool MyActSet::FBCreate()
 	StartSize[0] = 300;
 	StartSize[1] = 275;
 
-	// Create UI
+	// Populate UI
 	UICreate();
 	return true;
 }

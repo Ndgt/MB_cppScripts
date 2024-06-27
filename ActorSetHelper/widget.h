@@ -14,6 +14,8 @@ public:
 	MyActSetWidget( QWidget* pParent = 0 );
 	virtual ~MyActSetWidget();
 
+
+/* functions invoked by UI buttons */
 public slots:
 	void CreateActorMarkerSet();
 	void FitToTrackers();

@@ -20,6 +20,7 @@ private:
 	void UICreate();
 
 private:
+	/* widget holder to implement Qt Widget */
 	FBWidgetHolder mQtHolder;
 };
 

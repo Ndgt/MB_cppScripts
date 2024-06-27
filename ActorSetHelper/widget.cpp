@@ -91,7 +91,8 @@ void MyActSetWidget::BindMarkerModel() {
         FBMessageBox("Caution", "Error : Created Actor or MarkerSet not found", "OK");
     }
     else {
-        int trackerNumber = 20;
+        // All Tracker Number : 13 trackers * 4 childrens  
+        int trackerNumber = 52;
         int counter = 0;
 
         // Search for all trackers in mIndex from BodyIndex.h
@@ -112,16 +113,18 @@ void MyActSetWidget::BindMarkerModel() {
             }
         }
 
-        if (counter == trackerNumber) {
-            // Execute Snap 
-            actor->Snap(kFBRecalcMarkerSetOffsetTR);
+        // Execute Snap 
+        actor->Snap(kFBRecalcMarkerSetOffsetTR);
 
-            FBMessageBox("message",
+        if (counter == trackerNumber) {
+            FBMessageBox("Message",
                 "Binding Tracker was completed ! \n Check Actor Settings before playing.",
                 "OK");
         }
         else {
-            FBMessageBox("Caution", "Error : Some Tracker not found.\nCheck Scene data and Actor Settings.", "OK");
+            FBMessageBox("Caution",
+                "Error : Some Tracker not found.\nCheck Scene data and Actor Settings.",
+                "OK");
         }
     }
 }
